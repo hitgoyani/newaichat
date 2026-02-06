@@ -1,0 +1,216 @@
+[2026-02-06T22:36:24.301881] [INFO] Crawler initialized
+[2026-02-06T22:36:24.302419] [INFO] ============================================================
+[2026-02-06T22:36:24.302792] [INFO] STARTING PHASE 1: DISCOVERY & CRAWL
+[2026-02-06T22:36:24.303100] [INFO] ============================================================
+[2026-02-06T22:36:25.100880] [INFO] robots.txt loaded successfully
+[2026-02-06T22:36:25.101642] [INFO] Downloading: https://charusat.ac.in/
+[2026-02-06T22:36:25.870058] [INFO] Saved: 21b29220.html
+[2026-02-06T22:36:26.897359] [INFO] Found 120 links on https://charusat.ac.in/
+[2026-02-06T22:36:26.899285] [INFO] Progress: 1/50 pages crawled, 131 in queue
+[2026-02-06T22:36:26.899776] [INFO] Downloading: https://charusat.ac.in/admissions
+[2026-02-06T22:36:27.877954] [WARNING] HTTP 404: https://charusat.ac.in/admissions
+[2026-02-06T22:36:27.880063] [INFO] Downloading: https://charusat.ac.in/admission/
+[2026-02-06T22:36:29.226323] [INFO] Saved: admission_75aad9d9.html
+[2026-02-06T22:36:30.245723] [INFO] Found 1 links on https://charusat.ac.in/admission/
+[2026-02-06T22:36:30.246436] [INFO] Progress: 2/50 pages crawled, 130 in queue
+[2026-02-06T22:36:30.246827] [INFO] Downloading: https://charusat.ac.in/academics
+[2026-02-06T22:36:31.197337] [WARNING] HTTP 404: https://charusat.ac.in/academics
+[2026-02-06T22:36:31.199350] [INFO] Downloading: https://charusat.ac.in/examination
+[2026-02-06T22:36:32.411282] [WARNING] HTTP 404: https://charusat.ac.in/examination
+[2026-02-06T22:36:32.413238] [INFO] Downloading: https://charusat.ac.in/student-section
+[2026-02-06T22:36:33.267492] [WARNING] HTTP 404: https://charusat.ac.in/student-section
+[2026-02-06T22:36:33.270487] [INFO] Downloading: https://charusat.ac.in/departments
+[2026-02-06T22:36:34.177156] [WARNING] HTTP 404: https://charusat.ac.in/departments
+[2026-02-06T22:36:34.179218] [INFO] Downloading: https://charusat.ac.in/news
+[2026-02-06T22:36:35.041322] [WARNING] HTTP 404: https://charusat.ac.in/news
+[2026-02-06T22:36:35.043277] [INFO] Downloading: https://charusat.ac.in/notice
+[2026-02-06T22:36:35.799040] [WARNING] HTTP 404: https://charusat.ac.in/notice
+[2026-02-06T22:36:35.801292] [INFO] Downloading: https://charusat.ac.in/circular
+[2026-02-06T22:36:36.582545] [WARNING] HTTP 404: https://charusat.ac.in/circular
+[2026-02-06T22:36:36.584559] [INFO] Downloading: https://charusat.ac.in/downloads
+[2026-02-06T22:36:37.408526] [WARNING] HTTP 404: https://charusat.ac.in/downloads
+[2026-02-06T22:36:37.410650] [INFO] Downloading: https://charusat.ac.in/contact
+[2026-02-06T22:36:38.161227] [WARNING] HTTP 404: https://charusat.ac.in/contact
+[2026-02-06T22:36:38.163326] [INFO] Downloading: https://charusat.ac.in/calendar
+[2026-02-06T22:36:38.835715] [INFO] Saved: calendar_6774f050.html
+[2026-02-06T22:36:39.851227] [INFO] Found 106 links on https://charusat.ac.in/calendar
+[2026-02-06T22:36:39.851963] [INFO] Progress: 3/50 pages crawled, 120 in queue
+[2026-02-06T22:36:39.852490] [INFO] Downloading: https://charusat.ac.in/events
+[2026-02-06T22:36:40.798421] [WARNING] HTTP 404: https://charusat.ac.in/events
+[2026-02-06T22:36:40.800281] [INFO] Downloading: https://admission.charusat.ac.in/
+[2026-02-06T22:36:41.374378] [INFO] Saved: c752ec05.html
+[2026-02-06T22:36:42.385871] [INFO] Found 1 links on https://admission.charusat.ac.in/
+[2026-02-06T22:36:42.386416] [INFO] Progress: 4/50 pages crawled, 119 in queue
+[2026-02-06T22:36:42.386803] [INFO] Downloading: https://charusat.ac.in/governing-body
+[2026-02-06T22:36:43.159428] [INFO] Saved: governing-body_6c4e31ef.html
+[2026-02-06T22:36:44.173844] [INFO] Found 123 links on https://charusat.ac.in/governing-body
+[2026-02-06T22:36:44.174511] [INFO] Progress: 5/50 pages crawled, 135 in queue
+[2026-02-06T22:36:44.174951] [INFO] Downloading: https://charusat.ac.in/_next/static/css/2f98596c287bc6b5.css
+[2026-02-06T22:36:44.978446] [INFO] Saved: _next_static_css_2f98596c287bc6b5_css_c7371043.bin
+[2026-02-06T22:36:45.980731] [INFO] Progress: 6/50 pages crawled, 134 in queue
+[2026-02-06T22:36:45.981436] [INFO] Downloading: https://charusat.ac.in/president-desk
+[2026-02-06T22:36:46.675829] [INFO] Saved: president-desk_074f0fd5.html
+[2026-02-06T22:36:47.688015] [INFO] Found 106 links on https://charusat.ac.in/president-desk
+[2026-02-06T22:36:47.688588] [INFO] Progress: 7/50 pages crawled, 133 in queue
+[2026-02-06T22:36:47.689156] [INFO] Downloading: https://charusat.ac.in/charusatjournal/
+[2026-02-06T22:36:48.902652] [ERROR] Error downloading https://charusat.ac.in/charusatjournal/: HTTPSConnectionPool(host='charusat.edu.in', port=443): Max retries exceeded with url: /charusatjournal (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))
+[2026-02-06T22:36:48.903363] [INFO] Downloading: https://charusat.ac.in/assets\files\Gazette-Notification-Private-University-Act.pdf
+[2026-02-06T22:36:50.638775] [INFO] Saved: assets_files_Gazette-Notification-Private-University-Act_pdf_e756fb5f.pdf
+[2026-02-06T22:36:51.641092] [INFO] Progress: 8/50 pages crawled, 131 in queue
+[2026-02-06T22:36:51.641647] [INFO] Downloading: https://www.charusat.ac.in/rpcp/
+[2026-02-06T22:36:52.388628] [INFO] Saved: rpcp_9115e13f.html
+[2026-02-06T22:36:53.417331] [INFO] Found 35 links on https://www.charusat.ac.in/rpcp/
+[2026-02-06T22:36:53.417909] [INFO] Progress: 9/50 pages crawled, 164 in queue
+[2026-02-06T22:36:53.418271] [INFO] Downloading: https://charusat.ac.in/scholarship
+[2026-02-06T22:36:54.348818] [INFO] Saved: scholarship_d95606f9.html
+[2026-02-06T22:36:55.362063] [INFO] Found 109 links on https://charusat.ac.in/scholarship
+[2026-02-06T22:36:55.362584] [INFO] Progress: 10/50 pages crawled, 167 in queue
+[2026-02-06T22:36:55.362869] [INFO] Downloading: https://charusat.ac.in/code-of-conduct
+[2026-02-06T22:36:56.328717] [INFO] Saved: code-of-conduct_b900a753.html
+[2026-02-06T22:36:57.341645] [INFO] Found 110 links on https://charusat.ac.in/code-of-conduct
+[2026-02-06T22:36:57.342364] [INFO] Progress: 11/50 pages crawled, 170 in queue
+[2026-02-06T22:36:57.342730] [INFO] Downloading: https://charusat.ac.in/course-single
+[2026-02-06T22:36:58.253468] [INFO] Saved: course-single_3757d4f7.html
+[2026-02-06T22:36:59.306721] [INFO] Found 126 links on https://charusat.ac.in/course-single
+[2026-02-06T22:36:59.307281] [INFO] Progress: 12/50 pages crawled, 189 in queue
+[2026-02-06T22:36:59.307716] [INFO] Downloading: https://charusat.ac.in//assets/files/Research/2024/new/CSRI_Policy_CHARUSAT_2024.pdf
+[2026-02-06T22:37:00.563609] [INFO] Saved: assets_files_Research_2024_new_CSRI_Policy_CHARUSAT_2024_pdf_21e38fd3.pdf
+[2026-02-06T22:37:01.566136] [INFO] Progress: 13/50 pages crawled, 188 in queue
+[2026-02-06T22:37:01.566783] [INFO] Downloading: https://charusat.ac.in/convocations
+[2026-02-06T22:37:02.374239] [INFO] Saved: convocations_a3849ed7.html
+[2026-02-06T22:37:03.388484] [INFO] Found 106 links on https://charusat.ac.in/convocations
+[2026-02-06T22:37:03.389188] [INFO] Progress: 14/50 pages crawled, 187 in queue
+[2026-02-06T22:37:03.389593] [INFO] Downloading: https://charusat.ac.in/project-grants
+[2026-02-06T22:37:04.334404] [INFO] Saved: project-grants_b0326f46.html
+[2026-02-06T22:37:05.347693] [INFO] Found 107 links on https://charusat.ac.in/project-grants
+[2026-02-06T22:37:05.348323] [INFO] Progress: 15/50 pages crawled, 187 in queue
+[2026-02-06T22:37:05.348720] [INFO] Downloading: https://charusat.ac.in//assets/files/Research/2024/new/CPSF_Policy_CHARUSAT_2024.pdf
+[2026-02-06T22:37:06.577618] [INFO] Saved: assets_files_Research_2024_new_CPSF_Policy_CHARUSAT_2024_pdf_331afcbf.pdf
+[2026-02-06T22:37:07.580060] [INFO] Progress: 16/50 pages crawled, 186 in queue
+[2026-02-06T22:37:07.580829] [INFO] Downloading: https://charusat.ac.in/documents/pdfs/research/Guidelines_for_Financial_Assistance_to_full-time_UG_PG_&_Ph.D_Scholar.pdf
+[2026-02-06T22:37:10.933025] [INFO] Saved: documents_pdfs_research_Guidelines_for_Financial_Assistance_to_full-time_UG_PG___Ph_D_Scholar_pdf_fbf17a04.html
+[2026-02-06T22:37:11.983177] [INFO] Found 54 links on https://charusat.ac.in/documents/pdfs/research/Guidelines_for_Financial_Assistance_to_full-time_UG_PG_&_Ph.D_Scholar.pdf
+[2026-02-06T22:37:11.983874] [INFO] Progress: 17/50 pages crawled, 238 in queue
+[2026-02-06T22:37:11.984289] [INFO] Downloading: https://isc.charusat.ac.in/
+[2026-02-06T22:37:14.440309] [INFO] Saved: 290b9d3c.html
+[2026-02-06T22:37:15.493097] [INFO] Found 54 links on https://isc.charusat.ac.in/
+[2026-02-06T22:37:15.493811] [INFO] Progress: 18/50 pages crawled, 290 in queue
+[2026-02-06T22:37:15.494341] [INFO] Downloading: https://charusat.ac.in/wdc
+[2026-02-06T22:37:16.399803] [INFO] Saved: wdc_3513f89b.html
+[2026-02-06T22:37:17.412383] [INFO] Found 118 links on https://charusat.ac.in/wdc
+[2026-02-06T22:37:17.413102] [INFO] Progress: 19/50 pages crawled, 301 in queue
+[2026-02-06T22:37:17.413519] [INFO] Downloading: https://charusat.ac.in/assets/files/PHD/Guidelines for writing PhD Thesis 2024.pdf
+[2026-02-06T22:37:18.657364] [INFO] Saved: assets_files_PHD_Guidelines_for_writing_PhD_Thesis_2024_pdf_5864abde.pdf
+[2026-02-06T22:37:19.660695] [INFO] Progress: 20/50 pages crawled, 300 in queue
+[2026-02-06T22:37:19.661330] [INFO] Downloading: https://charusat.ac.in//assets/files/Research/2024/new/IPR_Policy_CHARUSAT_2024.pdf
+[2026-02-06T22:37:21.932190] [INFO] Saved: assets_files_Research_2024_new_IPR_Policy_CHARUSAT_2024_pdf_b82ab381.pdf
+[2026-02-06T22:37:22.935670] [INFO] Progress: 21/50 pages crawled, 299 in queue
+[2026-02-06T22:37:22.936345] [INFO] Downloading: https://charusat.ac.in/_next/static/css/e74827907dcbac93.css
+[2026-02-06T22:37:23.958405] [INFO] Saved: _next_static_css_e74827907dcbac93_css_517009b9.bin
+[2026-02-06T22:37:24.960555] [INFO] Progress: 22/50 pages crawled, 298 in queue
+[2026-02-06T22:37:24.961196] [INFO] Downloading: https://charusat.ac.in//assets/files/Research/2024/new/UGSF_Policy_CHARUSAT_2024.pdf
+[2026-02-06T22:37:26.534808] [INFO] Saved: assets_files_Research_2024_new_UGSF_Policy_CHARUSAT_2024_pdf_9c121655.pdf
+[2026-02-06T22:37:27.537795] [INFO] Progress: 23/50 pages crawled, 297 in queue
+[2026-02-06T22:37:27.538641] [INFO] Downloading: http://kradle.charusat.ac.in/
+[2026-02-06T22:37:29.859559] [INFO] Saved: 7531e8de.html
+[2026-02-06T22:37:30.933055] [INFO] Found 54 links on http://kradle.charusat.ac.in/
+[2026-02-06T22:37:30.933743] [INFO] Progress: 24/50 pages crawled, 349 in queue
+[2026-02-06T22:37:30.934098] [INFO] Downloading: https://charusat.ac.in/assets/files/Advertisement-other-event/MTIN_admission.pdf
+[2026-02-06T22:37:33.983785] [INFO] Saved: assets_files_Advertisement-other-event_MTIN_admission_pdf_76c27f55.pdf
+[2026-02-06T22:37:34.987172] [INFO] Progress: 25/50 pages crawled, 348 in queue
+[2026-02-06T22:37:34.988138] [INFO] Downloading: https://alumni.charusat.ac.in/
+[2026-02-06T22:37:36.230781] [INFO] Saved: e517cacb.html
+[2026-02-06T22:37:37.235686] [INFO] Found 1 links on https://alumni.charusat.ac.in/
+[2026-02-06T22:37:37.236403] [INFO] Progress: 26/50 pages crawled, 348 in queue
+[2026-02-06T22:37:37.236983] [INFO] Downloading: https://charusat.ac.in/Downloads/
+[2026-02-06T22:37:40.407196] [INFO] Saved: Downloads_59b915d3.html
+[2026-02-06T22:37:41.437216] [INFO] Found 3 links on https://charusat.ac.in/Downloads/
+[2026-02-06T22:37:41.437971] [INFO] Progress: 27/50 pages crawled, 350 in queue
+[2026-02-06T22:37:41.438657] [INFO] Downloading: https://charusat.ac.in/files/CHARUSAT-STATUTES%20HANDBOOK.pdf
+[2026-02-06T22:37:45.399102] [INFO] Saved: files_CHARUSAT-STATUTES_20HANDBOOK_pdf_a1b61e8a.html
+[2026-02-06T22:37:46.462028] [INFO] Found 54 links on https://charusat.ac.in/files/CHARUSAT-STATUTES%20HANDBOOK.pdf
+[2026-02-06T22:37:46.462658] [INFO] Progress: 28/50 pages crawled, 361 in queue
+[2026-02-06T22:37:46.463200] [INFO] Downloading: https://charusat.ac.in/intellectual-property
+[2026-02-06T22:37:47.317356] [INFO] Saved: intellectual-property_32f344be.html
+[2026-02-06T22:37:48.332521] [INFO] Found 108 links on https://charusat.ac.in/intellectual-property
+[2026-02-06T22:37:48.333401] [INFO] Progress: 29/50 pages crawled, 362 in queue
+[2026-02-06T22:37:48.333985] [INFO] Downloading: https://charusat.ac.in/careers
+[2026-02-06T22:37:49.169263] [INFO] Saved: careers_a21d45c5.html
+[2026-02-06T22:37:50.180902] [INFO] Found 107 links on https://charusat.ac.in/careers
+[2026-02-06T22:37:50.181548] [INFO] Progress: 30/50 pages crawled, 362 in queue
+[2026-02-06T22:37:50.181943] [INFO] Downloading: https://charusat.ac.in/university-admin-officers
+[2026-02-06T22:37:52.258923] [INFO] Saved: university-admin-officers_9b7ab91f.html
+[2026-02-06T22:37:53.285614] [INFO] Found 107 links on https://charusat.ac.in/university-admin-officers
+[2026-02-06T22:37:53.286325] [INFO] Progress: 31/50 pages crawled, 361 in queue
+[2026-02-06T22:37:53.286676] [INFO] Downloading: https://charusat.ac.in//assets/files/Research/2024/new/PGSF_Policy_CHARUSAT_2024.pdf
+[2026-02-06T22:37:55.163492] [INFO] Saved: assets_files_Research_2024_new_PGSF_Policy_CHARUSAT_2024_pdf_1411c5d7.pdf
+[2026-02-06T22:37:56.166615] [INFO] Progress: 32/50 pages crawled, 360 in queue
+[2026-02-06T22:37:56.167449] [INFO] Downloading: https://charusat.ac.in//assets/files/Research/2024/new/Research_Policy_CHARUSAT_2024.pdf
+[2026-02-06T22:37:57.534709] [INFO] Saved: assets_files_Research_2024_new_Research_Policy_CHARUSAT_2024_pdf_00e364fa.pdf
+[2026-02-06T22:37:58.537558] [INFO] Progress: 33/50 pages crawled, 359 in queue
+[2026-02-06T22:37:58.538516] [INFO] Downloading: https://charusat.ac.in/assets/files/Environment-Sustainable-Policy/Sustainbility_Policy.pdf
+[2026-02-06T22:38:00.552528] [INFO] Saved: assets_files_Environment-Sustainable-Policy_Sustainbility_Policy_pdf_2840c3a0.pdf
+[2026-02-06T22:38:01.556084] [INFO] Progress: 34/50 pages crawled, 358 in queue
+[2026-02-06T22:38:01.556863] [INFO] Downloading: https://charusat.ac.in/campus-map
+[2026-02-06T22:38:02.356580] [INFO] Saved: campus-map_8118e01f.html
+[2026-02-06T22:38:03.377388] [INFO] Found 106 links on https://charusat.ac.in/campus-map
+[2026-02-06T22:38:03.378125] [INFO] Progress: 35/50 pages crawled, 357 in queue
+[2026-02-06T22:38:03.378720] [INFO] Downloading: https://charusat.ac.in//assets/files/Research/2024/new/Endowment_Policy_CHARUSAT_2024.pdf
+[2026-02-06T22:38:04.966364] [INFO] Saved: assets_files_Research_2024_new_Endowment_Policy_CHARUSAT_2024_pdf_3db2c80a.pdf
+[2026-02-06T22:38:05.969849] [INFO] Progress: 36/50 pages crawled, 356 in queue
+[2026-02-06T22:38:05.970624] [INFO] Downloading: https://charusat.ac.in/donation
+[2026-02-06T22:38:06.927703] [INFO] Saved: donation_4592c3ff.html
+[2026-02-06T22:38:07.946270] [INFO] Found 108 links on https://charusat.ac.in/donation
+[2026-02-06T22:38:07.946894] [INFO] Progress: 37/50 pages crawled, 357 in queue
+[2026-02-06T22:38:07.947413] [INFO] Downloading: https://charusat.ac.in/ipr
+[2026-02-06T22:38:08.799774] [INFO] Saved: ipr_eb2bccc0.html
+[2026-02-06T22:38:09.813831] [INFO] Found 109 links on https://charusat.ac.in/ipr
+[2026-02-06T22:38:09.814581] [INFO] Progress: 38/50 pages crawled, 359 in queue
+[2026-02-06T22:38:09.815119] [INFO] Downloading: https://charusat.ac.in/CREDP
+[2026-02-06T22:38:10.838955] [INFO] Saved: CREDP_67ffd8d9.html
+[2026-02-06T22:38:11.852924] [INFO] Found 106 links on https://charusat.ac.in/CREDP
+[2026-02-06T22:38:11.853614] [INFO] Progress: 39/50 pages crawled, 358 in queue
+[2026-02-06T22:38:11.854135] [INFO] Downloading: https://charusat.ac.in/media-center
+[2026-02-06T22:38:12.748132] [INFO] Saved: media-center_450a3636.html
+[2026-02-06T22:38:13.762348] [INFO] Found 108 links on https://charusat.ac.in/media-center
+[2026-02-06T22:38:13.763087] [INFO] Progress: 40/50 pages crawled, 359 in queue
+[2026-02-06T22:38:13.763726] [INFO] Downloading: https://charusat.ac.in/accreditation-and-ranking
+[2026-02-06T22:38:14.741064] [INFO] Saved: accreditation-and-ranking_83fc8f08.html
+[2026-02-06T22:38:15.756401] [INFO] Found 129 links on https://charusat.ac.in/accreditation-and-ranking
+[2026-02-06T22:38:15.757001] [INFO] Progress: 41/50 pages crawled, 381 in queue
+[2026-02-06T22:38:15.757513] [INFO] Downloading: https://charusat.ac.in/policies-terms
+[2026-02-06T22:38:16.782392] [INFO] Saved: policies-terms_aa9855d9.html
+[2026-02-06T22:38:17.796768] [INFO] Found 113 links on https://charusat.ac.in/policies-terms
+[2026-02-06T22:38:17.797635] [INFO] Progress: 42/50 pages crawled, 386 in queue
+[2026-02-06T22:38:17.798225] [INFO] Downloading: https://charusat.ac.in/anti-ragging
+[2026-02-06T22:38:18.660577] [INFO] Saved: anti-ragging_b1b33623.html
+[2026-02-06T22:38:19.683222] [INFO] Found 118 links on https://charusat.ac.in/anti-ragging
+[2026-02-06T22:38:19.683976] [INFO] Progress: 43/50 pages crawled, 397 in queue
+[2026-02-06T22:38:19.684494] [INFO] Downloading: https://charusat.ac.in//assets/files/Research/2024/new/PDF_Policy_CHARUSAT_2024.pdf
+[2026-02-06T22:38:20.770995] [INFO] Saved: assets_files_Research_2024_new_PDF_Policy_CHARUSAT_2024_pdf_880142ae.pdf
+[2026-02-06T22:38:21.774063] [INFO] Progress: 44/50 pages crawled, 396 in queue
+[2026-02-06T22:38:21.774705] [INFO] Downloading: https://kradle.charusat.ac.in/
+[2026-02-06T22:38:23.983056] [INFO] Saved: 0fef4232.html
+[2026-02-06T22:38:25.042962] [INFO] Found 54 links on https://kradle.charusat.ac.in/
+[2026-02-06T22:38:25.043739] [INFO] Progress: 45/50 pages crawled, 448 in queue
+[2026-02-06T22:38:25.044321] [INFO] Downloading: https://charusat.ac.in/admission-doc-undertaking
+[2026-02-06T22:38:25.982318] [INFO] Saved: admission-doc-undertaking_e1b71361.html
+[2026-02-06T22:38:26.996744] [INFO] Found 110 links on https://charusat.ac.in/admission-doc-undertaking
+[2026-02-06T22:38:26.997798] [INFO] Progress: 46/50 pages crawled, 451 in queue
+[2026-02-06T22:38:26.998677] [INFO] Downloading: https://charusat.ac.in/assets/files/CHARUSAT_Eco-Friendly_Transporation_Policy.pdf
+[2026-02-06T22:38:29.065824] [INFO] Saved: assets_files_CHARUSAT_Eco-Friendly_Transporation_Policy_pdf_344840f3.pdf
+[2026-02-06T22:38:30.069150] [INFO] Progress: 47/50 pages crawled, 450 in queue
+[2026-02-06T22:38:30.070068] [INFO] Downloading: https://charusat.ac.in/torchbearers
+[2026-02-06T22:38:30.981975] [INFO] Saved: torchbearers_fd32b667.html
+[2026-02-06T22:38:32.000984] [INFO] Found 106 links on https://charusat.ac.in/torchbearers
+[2026-02-06T22:38:32.001682] [INFO] Progress: 48/50 pages crawled, 449 in queue
+[2026-02-06T22:38:32.002018] [INFO] Downloading: https://charusat.ac.in/publications
+[2026-02-06T22:38:32.990932] [INFO] Saved: publications_f54e8d52.html
+[2026-02-06T22:38:34.012823] [INFO] Found 108 links on https://charusat.ac.in/publications
+[2026-02-06T22:38:34.013416] [INFO] Progress: 49/50 pages crawled, 448 in queue
+[2026-02-06T22:38:34.014051] [INFO] Downloading: https://www.charusat.ac.in/bdips/
+[2026-02-06T22:38:34.854069] [INFO] Saved: bdips_88681483.html
+[2026-02-06T22:38:35.881324] [INFO] Found 46 links on https://www.charusat.ac.in/bdips/
+[2026-02-06T22:38:35.881980] [INFO] Progress: 50/50 pages crawled, 488 in queue
+[2026-02-06T22:38:35.883243] [INFO] Phase 1 complete. Crawled 50 items
+[2026-02-06T22:38:35.883592] [INFO] Manifest saved to: C:\Users\Hit\Desktop\New folder\university-helpdesk\crawler\data\raw\discovery_manifest.json

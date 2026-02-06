@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Base Manager - University Helpdesk</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #1e40af;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #374151;
+            font-size: 20px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .upload-area {
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .upload-area:hover {
+            border-color: #3b82f6;
+            background: #f9fafb;
+        }
+
+        .upload-area.dragover {
+            border-color: #10b981;
+            background: #d1fae5;
+        }
+
+        .upload-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .upload-btn {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.2s;
+        }
+
+        .upload-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+
+        .upload-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .file-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .file-item {
+            background: #f9fafb;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .file-name {
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .file-type {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .message {
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .message.success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #10b981;
+        }
+
+        .message.error {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #ef4444;
+        }
+
+        .message.show {
+            display: block;
+        }
+
+        .info-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .info-box ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .info-box li {
+            margin-bottom: 5px;
+            color: #1e40af;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 3px solid rgba(59, 130, 246, 0.2);
+            border-top-color: #3b82f6;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .btn-secondary {
+            background: #e5e7eb;
+            color: #374151;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: #d1d5db;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>📚 Knowledge Base Manager</h1>
+        <p class="subtitle">Upload text files (.txt) or PDFs to expand the helpdesk knowledge base</p>
+
+        <div class="info-box">
+            <strong>📝 Instructions:</strong>
+            <ul>
+                <li>Click the upload area or drag & drop files</li>
+                <li>Supported formats: <code>.txt</code> and <code>.pdf</code></li>
+                <li>Files are processed immediately (no server restart needed)</li>
+                <li>Knowledge base auto-reloads after each upload</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Upload New Knowledge File</h2>
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">📁</div>
+                <p><strong>Click to select file or drag & drop here</strong></p>
+                <p style="color: #6b7280; font-size: 14px; margin-top: 8px;">Accepted: .txt, .pdf (max 10MB)</p>
+                <input type="file" id="fileInput" class="file-input" accept=".txt,.pdf">
+            </div>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p style="margin-top: 10px; color: #6b7280;">Uploading and processing...</p>
+            </div>
+
+            <div id="message" class="message"></div>
+        </div>
+
+        <div class="section">
+            <h2>Current Knowledge Base</h2>
+            <button class="btn-secondary" onclick="loadKnowledgeFiles()">🔄 Refresh List</button>
+
+            <div class="stats" id="stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalFiles">-</div>
+                    <div class="stat-label">Total Files</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="textFiles">-</div>
+                    <div class="stat-label">Text Files</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="pdfFiles">-</div>
+                    <div class="stat-label">PDF Files</div>
+                </div>
+            </div>
+
+            <ul class="file-list" id="fileList">
+                <li class="file-item" style="justify-content: center; color: #6b7280;">
+                    Loading files...
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:5000';
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const message = document.getElementById('message');
+        const loading = document.getElementById('loading');
+
+        // Click to upload
+        uploadArea.addEventListener('click', () => fileInput.click());
+
+        // File selected
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                uploadFile(e.target.files[0]);
+            }
+        });
+
+        // Drag and drop
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            if (e.dataTransfer.files.length > 0) {
+                uploadFile(e.dataTransfer.files[0]);
+            }
+        });
+
+        async function uploadFile(file) {
+            // Validate file type
+            const allowedTypes = ['text/plain', 'application/pdf'];
+            if (!allowedTypes.includes(file.type) && !file.name.match(/\.(txt|pdf)$/i)) {
+                showMessage('error', 'Only .txt and .pdf files are allowed');
+                return;
+            }
+
+            // Validate file size (10MB max)
+            if (file.size > 10 * 1024 * 1024) {
+                showMessage('error', 'File size must be less than 10MB');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            loading.style.display = 'block';
+            message.classList.remove('show');
+
+            try {
+                const response = await fetch(`${API_URL}/upload`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (data.status === 'success') {
+                    showMessage('success', `✅ ${data.message} (Total files: ${data.total_files_loaded})`);
+                    fileInput.value = '';
+                    loadKnowledgeFiles(); // Refresh list
+                } else {
+                    showMessage('error', `❌ ${data.message}`);
+                }
+            } catch (error) {
+                showMessage('error', `❌ Upload failed: ${error.message}. Make sure backend is running on ${API_URL}`);
+            } finally {
+                loading.style.display = 'none';
+            }
+        }
+
+        async function loadKnowledgeFiles() {
+            const fileList = document.getElementById('fileList');
+            fileList.innerHTML = '<li class="file-item" style="justify-content: center; color: #6b7280;">Loading...</li>';
+
+            try {
+                const response = await fetch(`${API_URL}/knowledge/list`);
+                const data = await response.json();
+
+                if (data.status === 'success') {
+                    const files = data.files;
+
+                    if (files.length === 0) {
+                        fileList.innerHTML = '<li class="file-item" style="justify-content: center; color: #6b7280;">No files found</li>';
+                    } else {
+                        fileList.innerHTML = files.map(file => {
+                            const ext = file.includes('.') ? file.split('.').pop() : 'txt';
+                            return `
+                                <li class="file-item">
+                                    <span class="file-name">📄 ${file}</span>
+                                    <span class="file-type">${ext.toUpperCase()}</span>
+                                </li>
+                            `;
+                        }).join('');
+                    }
+
+                    // Update stats
+                    const textCount = files.filter(f => !f.includes('.')).length; // Keys without extension
+                    const totalCount = files.length;
+                    const pdfCount = totalCount - textCount;
+
+                    document.getElementById('totalFiles').textContent = totalCount;
+                    document.getElementById('textFiles').textContent = textCount;
+                    document.getElementById('pdfFiles').textContent = pdfCount;
+                }
+            } catch (error) {
+                fileList.innerHTML = `<li class="file-item" style="justify-content: center; color: #ef4444;">
+                    ❌ Failed to load files. Make sure backend is running on ${API_URL}
+                </li>`;
+            }
+        }
+
+        function showMessage(type, text) {
+            message.className = `message ${type} show`;
+            message.textContent = text;
+        }
+
+        // Load files on page load
+        loadKnowledgeFiles();
+    </script>
+</body>
+
+</html>

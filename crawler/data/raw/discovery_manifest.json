@@ -1,0 +1,452 @@
+[
+  {
+    "url": "https://charusat.ac.in/",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:36:25.869983",
+    "last_modified": "Mon, 02 Feb 2026 20:42:57 GMT",
+    "file_path": "data\\raw\\21b29220.html",
+    "slug": "21b29220"
+  },
+  {
+    "url": "https://charusat.ac.in/admission/",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:36:29.226262",
+    "last_modified": null,
+    "file_path": "data\\raw\\admission_75aad9d9.html",
+    "slug": "admission_75aad9d9"
+  },
+  {
+    "url": "https://charusat.ac.in/calendar",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:36:38.835659",
+    "last_modified": "Fri, 06 Feb 2026 04:49:43 GMT",
+    "file_path": "data\\raw\\calendar_6774f050.html",
+    "slug": "calendar_6774f050"
+  },
+  {
+    "url": "https://admission.charusat.ac.in/",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:36:41.374317",
+    "last_modified": null,
+    "file_path": "data\\raw\\c752ec05.html",
+    "slug": "c752ec05"
+  },
+  {
+    "url": "https://charusat.ac.in/governing-body",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:36:43.159370",
+    "last_modified": "Fri, 06 Feb 2026 05:53:53 GMT",
+    "file_path": "data\\raw\\governing-body_6c4e31ef.html",
+    "slug": "governing-body_6c4e31ef"
+  },
+  {
+    "url": "https://charusat.ac.in/_next/static/css/2f98596c287bc6b5.css",
+    "status_code": 200,
+    "content_type": "text/css; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:36:44.978393",
+    "last_modified": "Mon, 02 Feb 2026 17:45:41 GMT",
+    "file_path": "data\\raw\\_next_static_css_2f98596c287bc6b5_css_c7371043.bin",
+    "slug": "_next_static_css_2f98596c287bc6b5_css_c7371043"
+  },
+  {
+    "url": "https://charusat.ac.in/president-desk",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:36:46.675769",
+    "last_modified": "Tue, 03 Feb 2026 06:23:25 GMT",
+    "file_path": "data\\raw\\president-desk_074f0fd5.html",
+    "slug": "president-desk_074f0fd5"
+  },
+  {
+    "url": "https://charusat.ac.in/assets\\files\\Gazette-Notification-Private-University-Act.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "retrieved_at": "2026-02-06T22:36:50.638708",
+    "last_modified": "Fri, 06 Feb 2026 14:17:56 GMT",
+    "file_path": "data\\raw\\assets_files_Gazette-Notification-Private-University-Act_pdf_e756fb5f.pdf",
+    "slug": "assets_files_Gazette-Notification-Private-University-Act_pdf_e756fb5f"
+  },
+  {
+    "url": "https://www.charusat.ac.in/rpcp/",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:36:52.388563",
+    "last_modified": "Sat, 11 Oct 2025 10:55:20 GMT",
+    "file_path": "data\\raw\\rpcp_9115e13f.html",
+    "slug": "rpcp_9115e13f"
+  },
+  {
+    "url": "https://charusat.ac.in/scholarship",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:36:54.348765",
+    "last_modified": "Fri, 06 Feb 2026 04:33:03 GMT",
+    "file_path": "data\\raw\\scholarship_d95606f9.html",
+    "slug": "scholarship_d95606f9"
+  },
+  {
+    "url": "https://charusat.ac.in/code-of-conduct",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:36:56.328662",
+    "last_modified": "Wed, 04 Feb 2026 20:40:33 GMT",
+    "file_path": "data\\raw\\code-of-conduct_b900a753.html",
+    "slug": "code-of-conduct_b900a753"
+  },
+  {
+    "url": "https://charusat.ac.in/course-single",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:36:58.253382",
+    "last_modified": "Mon, 02 Feb 2026 17:49:49 GMT",
+    "file_path": "data\\raw\\course-single_3757d4f7.html",
+    "slug": "course-single_3757d4f7"
+  },
+  {
+    "url": "https://charusat.ac.in//assets/files/Research/2024/new/CSRI_Policy_CHARUSAT_2024.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "retrieved_at": "2026-02-06T22:37:00.563553",
+    "last_modified": "Fri, 06 Feb 2026 04:59:35 GMT",
+    "file_path": "data\\raw\\assets_files_Research_2024_new_CSRI_Policy_CHARUSAT_2024_pdf_21e38fd3.pdf",
+    "slug": "assets_files_Research_2024_new_CSRI_Policy_CHARUSAT_2024_pdf_21e38fd3"
+  },
+  {
+    "url": "https://charusat.ac.in/convocations",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:37:02.374170",
+    "last_modified": "Fri, 06 Feb 2026 10:40:10 GMT",
+    "file_path": "data\\raw\\convocations_a3849ed7.html",
+    "slug": "convocations_a3849ed7"
+  },
+  {
+    "url": "https://charusat.ac.in/project-grants",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:37:04.334351",
+    "last_modified": "Fri, 06 Feb 2026 14:17:51 GMT",
+    "file_path": "data\\raw\\project-grants_b0326f46.html",
+    "slug": "project-grants_b0326f46"
+  },
+  {
+    "url": "https://charusat.ac.in//assets/files/Research/2024/new/CPSF_Policy_CHARUSAT_2024.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "retrieved_at": "2026-02-06T22:37:06.577562",
+    "last_modified": "Tue, 03 Feb 2026 06:01:20 GMT",
+    "file_path": "data\\raw\\assets_files_Research_2024_new_CPSF_Policy_CHARUSAT_2024_pdf_331afcbf.pdf",
+    "slug": "assets_files_Research_2024_new_CPSF_Policy_CHARUSAT_2024_pdf_331afcbf"
+  },
+  {
+    "url": "https://charusat.ac.in/documents/pdfs/research/Guidelines_for_Financial_Assistance_to_full-time_UG_PG_&_Ph.D_Scholar.pdf",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:37:10.932962",
+    "last_modified": null,
+    "file_path": "data\\raw\\documents_pdfs_research_Guidelines_for_Financial_Assistance_to_full-time_UG_PG___Ph_D_Scholar_pdf_fbf17a04.html",
+    "slug": "documents_pdfs_research_Guidelines_for_Financial_Assistance_to_full-time_UG_PG___Ph_D_Scholar_pdf_fbf17a04"
+  },
+  {
+    "url": "https://isc.charusat.ac.in/",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:37:14.440254",
+    "last_modified": null,
+    "file_path": "data\\raw\\290b9d3c.html",
+    "slug": "290b9d3c"
+  },
+  {
+    "url": "https://charusat.ac.in/wdc",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:37:16.399746",
+    "last_modified": "Wed, 04 Feb 2026 05:27:50 GMT",
+    "file_path": "data\\raw\\wdc_3513f89b.html",
+    "slug": "wdc_3513f89b"
+  },
+  {
+    "url": "https://charusat.ac.in/assets/files/PHD/Guidelines for writing PhD Thesis 2024.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "retrieved_at": "2026-02-06T22:37:18.657285",
+    "last_modified": "Mon, 02 Feb 2026 21:10:50 GMT",
+    "file_path": "data\\raw\\assets_files_PHD_Guidelines_for_writing_PhD_Thesis_2024_pdf_5864abde.pdf",
+    "slug": "assets_files_PHD_Guidelines_for_writing_PhD_Thesis_2024_pdf_5864abde"
+  },
+  {
+    "url": "https://charusat.ac.in//assets/files/Research/2024/new/IPR_Policy_CHARUSAT_2024.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "retrieved_at": "2026-02-06T22:37:21.932119",
+    "last_modified": "Fri, 06 Feb 2026 17:07:19 GMT",
+    "file_path": "data\\raw\\assets_files_Research_2024_new_IPR_Policy_CHARUSAT_2024_pdf_b82ab381.pdf",
+    "slug": "assets_files_Research_2024_new_IPR_Policy_CHARUSAT_2024_pdf_b82ab381"
+  },
+  {
+    "url": "https://charusat.ac.in/_next/static/css/e74827907dcbac93.css",
+    "status_code": 200,
+    "content_type": "text/css; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:37:23.958327",
+    "last_modified": "Fri, 06 Feb 2026 04:41:52 GMT",
+    "file_path": "data\\raw\\_next_static_css_e74827907dcbac93_css_517009b9.bin",
+    "slug": "_next_static_css_e74827907dcbac93_css_517009b9"
+  },
+  {
+    "url": "https://charusat.ac.in//assets/files/Research/2024/new/UGSF_Policy_CHARUSAT_2024.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "retrieved_at": "2026-02-06T22:37:26.534733",
+    "last_modified": "Tue, 03 Feb 2026 13:22:38 GMT",
+    "file_path": "data\\raw\\assets_files_Research_2024_new_UGSF_Policy_CHARUSAT_2024_pdf_9c121655.pdf",
+    "slug": "assets_files_Research_2024_new_UGSF_Policy_CHARUSAT_2024_pdf_9c121655"
+  },
+  {
+    "url": "http://kradle.charusat.ac.in/",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:37:29.859500",
+    "last_modified": null,
+    "file_path": "data\\raw\\7531e8de.html",
+    "slug": "7531e8de"
+  },
+  {
+    "url": "https://charusat.ac.in/assets/files/Advertisement-other-event/MTIN_admission.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "retrieved_at": "2026-02-06T22:37:33.983718",
+    "last_modified": "Tue, 03 Feb 2026 04:23:42 GMT",
+    "file_path": "data\\raw\\assets_files_Advertisement-other-event_MTIN_admission_pdf_76c27f55.pdf",
+    "slug": "assets_files_Advertisement-other-event_MTIN_admission_pdf_76c27f55"
+  },
+  {
+    "url": "https://alumni.charusat.ac.in/",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:37:36.230674",
+    "last_modified": null,
+    "file_path": "data\\raw\\e517cacb.html",
+    "slug": "e517cacb"
+  },
+  {
+    "url": "https://charusat.ac.in/Downloads/",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:37:40.407127",
+    "last_modified": null,
+    "file_path": "data\\raw\\Downloads_59b915d3.html",
+    "slug": "Downloads_59b915d3"
+  },
+  {
+    "url": "https://charusat.ac.in/files/CHARUSAT-STATUTES%20HANDBOOK.pdf",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:37:45.399032",
+    "last_modified": null,
+    "file_path": "data\\raw\\files_CHARUSAT-STATUTES_20HANDBOOK_pdf_a1b61e8a.html",
+    "slug": "files_CHARUSAT-STATUTES_20HANDBOOK_pdf_a1b61e8a"
+  },
+  {
+    "url": "https://charusat.ac.in/intellectual-property",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:37:47.317281",
+    "last_modified": "Fri, 06 Feb 2026 14:17:53 GMT",
+    "file_path": "data\\raw\\intellectual-property_32f344be.html",
+    "slug": "intellectual-property_32f344be"
+  },
+  {
+    "url": "https://charusat.ac.in/careers",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:37:49.169205",
+    "last_modified": "Mon, 02 Feb 2026 20:42:30 GMT",
+    "file_path": "data\\raw\\careers_a21d45c5.html",
+    "slug": "careers_a21d45c5"
+  },
+  {
+    "url": "https://charusat.ac.in/university-admin-officers",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:37:52.258833",
+    "last_modified": "Fri, 06 Feb 2026 05:27:24 GMT",
+    "file_path": "data\\raw\\university-admin-officers_9b7ab91f.html",
+    "slug": "university-admin-officers_9b7ab91f"
+  },
+  {
+    "url": "https://charusat.ac.in//assets/files/Research/2024/new/PGSF_Policy_CHARUSAT_2024.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "retrieved_at": "2026-02-06T22:37:55.163416",
+    "last_modified": "Fri, 06 Feb 2026 17:07:53 GMT",
+    "file_path": "data\\raw\\assets_files_Research_2024_new_PGSF_Policy_CHARUSAT_2024_pdf_1411c5d7.pdf",
+    "slug": "assets_files_Research_2024_new_PGSF_Policy_CHARUSAT_2024_pdf_1411c5d7"
+  },
+  {
+    "url": "https://charusat.ac.in//assets/files/Research/2024/new/Research_Policy_CHARUSAT_2024.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "retrieved_at": "2026-02-06T22:37:57.534630",
+    "last_modified": "Fri, 06 Feb 2026 04:58:08 GMT",
+    "file_path": "data\\raw\\assets_files_Research_2024_new_Research_Policy_CHARUSAT_2024_pdf_00e364fa.pdf",
+    "slug": "assets_files_Research_2024_new_Research_Policy_CHARUSAT_2024_pdf_00e364fa"
+  },
+  {
+    "url": "https://charusat.ac.in/assets/files/Environment-Sustainable-Policy/Sustainbility_Policy.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "retrieved_at": "2026-02-06T22:38:00.552458",
+    "last_modified": "Fri, 06 Feb 2026 17:07:58 GMT",
+    "file_path": "data\\raw\\assets_files_Environment-Sustainable-Policy_Sustainbility_Policy_pdf_2840c3a0.pdf",
+    "slug": "assets_files_Environment-Sustainable-Policy_Sustainbility_Policy_pdf_2840c3a0"
+  },
+  {
+    "url": "https://charusat.ac.in/campus-map",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:38:02.356510",
+    "last_modified": "Fri, 06 Feb 2026 06:16:52 GMT",
+    "file_path": "data\\raw\\campus-map_8118e01f.html",
+    "slug": "campus-map_8118e01f"
+  },
+  {
+    "url": "https://charusat.ac.in//assets/files/Research/2024/new/Endowment_Policy_CHARUSAT_2024.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "retrieved_at": "2026-02-06T22:38:04.966290",
+    "last_modified": "Fri, 06 Feb 2026 17:08:03 GMT",
+    "file_path": "data\\raw\\assets_files_Research_2024_new_Endowment_Policy_CHARUSAT_2024_pdf_3db2c80a.pdf",
+    "slug": "assets_files_Research_2024_new_Endowment_Policy_CHARUSAT_2024_pdf_3db2c80a"
+  },
+  {
+    "url": "https://charusat.ac.in/donation",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:38:06.927645",
+    "last_modified": "Tue, 03 Feb 2026 07:12:49 GMT",
+    "file_path": "data\\raw\\donation_4592c3ff.html",
+    "slug": "donation_4592c3ff"
+  },
+  {
+    "url": "https://charusat.ac.in/ipr",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:38:08.799706",
+    "last_modified": "Fri, 06 Feb 2026 14:17:37 GMT",
+    "file_path": "data\\raw\\ipr_eb2bccc0.html",
+    "slug": "ipr_eb2bccc0"
+  },
+  {
+    "url": "https://charusat.ac.in/CREDP",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:38:10.838898",
+    "last_modified": "Fri, 06 Feb 2026 07:44:30 GMT",
+    "file_path": "data\\raw\\CREDP_67ffd8d9.html",
+    "slug": "CREDP_67ffd8d9"
+  },
+  {
+    "url": "https://charusat.ac.in/media-center",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:38:12.748065",
+    "last_modified": "Fri, 06 Feb 2026 04:58:35 GMT",
+    "file_path": "data\\raw\\media-center_450a3636.html",
+    "slug": "media-center_450a3636"
+  },
+  {
+    "url": "https://charusat.ac.in/accreditation-and-ranking",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:38:14.741006",
+    "last_modified": "Fri, 06 Feb 2026 08:05:26 GMT",
+    "file_path": "data\\raw\\accreditation-and-ranking_83fc8f08.html",
+    "slug": "accreditation-and-ranking_83fc8f08"
+  },
+  {
+    "url": "https://charusat.ac.in/policies-terms",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:38:16.782327",
+    "last_modified": "Fri, 06 Feb 2026 11:27:12 GMT",
+    "file_path": "data\\raw\\policies-terms_aa9855d9.html",
+    "slug": "policies-terms_aa9855d9"
+  },
+  {
+    "url": "https://charusat.ac.in/anti-ragging",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:38:18.660496",
+    "last_modified": "Fri, 06 Feb 2026 14:18:25 GMT",
+    "file_path": "data\\raw\\anti-ragging_b1b33623.html",
+    "slug": "anti-ragging_b1b33623"
+  },
+  {
+    "url": "https://charusat.ac.in//assets/files/Research/2024/new/PDF_Policy_CHARUSAT_2024.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "retrieved_at": "2026-02-06T22:38:20.770936",
+    "last_modified": "Thu, 05 Feb 2026 20:56:55 GMT",
+    "file_path": "data\\raw\\assets_files_Research_2024_new_PDF_Policy_CHARUSAT_2024_pdf_880142ae.pdf",
+    "slug": "assets_files_Research_2024_new_PDF_Policy_CHARUSAT_2024_pdf_880142ae"
+  },
+  {
+    "url": "https://kradle.charusat.ac.in/",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:38:23.982996",
+    "last_modified": null,
+    "file_path": "data\\raw\\0fef4232.html",
+    "slug": "0fef4232"
+  },
+  {
+    "url": "https://charusat.ac.in/admission-doc-undertaking",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:38:25.982249",
+    "last_modified": "Fri, 06 Feb 2026 11:13:32 GMT",
+    "file_path": "data\\raw\\admission-doc-undertaking_e1b71361.html",
+    "slug": "admission-doc-undertaking_e1b71361"
+  },
+  {
+    "url": "https://charusat.ac.in/assets/files/CHARUSAT_Eco-Friendly_Transporation_Policy.pdf",
+    "status_code": 200,
+    "content_type": "application/pdf",
+    "retrieved_at": "2026-02-06T22:38:29.065737",
+    "last_modified": "Fri, 06 Feb 2026 17:08:27 GMT",
+    "file_path": "data\\raw\\assets_files_CHARUSAT_Eco-Friendly_Transporation_Policy_pdf_344840f3.pdf",
+    "slug": "assets_files_CHARUSAT_Eco-Friendly_Transporation_Policy_pdf_344840f3"
+  },
+  {
+    "url": "https://charusat.ac.in/torchbearers",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:38:30.981907",
+    "last_modified": "Fri, 06 Feb 2026 14:18:00 GMT",
+    "file_path": "data\\raw\\torchbearers_fd32b667.html",
+    "slug": "torchbearers_fd32b667"
+  },
+  {
+    "url": "https://charusat.ac.in/publications",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:38:32.990741",
+    "last_modified": "Wed, 04 Feb 2026 13:07:42 GMT",
+    "file_path": "data\\raw\\publications_f54e8d52.html",
+    "slug": "publications_f54e8d52"
+  },
+  {
+    "url": "https://www.charusat.ac.in/bdips/",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "retrieved_at": "2026-02-06T22:38:34.854000",
+    "last_modified": "Sat, 06 Dec 2025 09:19:17 GMT",
+    "file_path": "data\\raw\\bdips_88681483.html",
+    "slug": "bdips_88681483"
+  }
+]
