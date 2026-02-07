@@ -28,6 +28,7 @@ const TRANSLATIONS = {
 
 // ===== STATE =====
 let currentLanguage = 'en';
+let messageHistory = [];
 
 // ===== DOM ELEMENTS =====
 const elements = {
@@ -41,7 +42,9 @@ const elements = {
     sendBtnText: document.getElementById('sendBtnText'),
     clearBtnText: document.getElementById('clearBtnText'),
     welcomeText: document.getElementById('welcomeText'),
-    langBtns: document.querySelectorAll('.lang-btn')
+    langBtns: document.querySelectorAll('.lang-btn'),
+    typingIndicator: document.getElementById('typingIndicator'),
+    suggestions: document.getElementById('suggestions')
 };
 
 // ===== INITIALIZATION =====
@@ -62,8 +65,22 @@ function init() {
         });
     });
 
+    // Suggestion pills
+    document.querySelectorAll('.suggestion-pill').forEach(pill => {
+        pill.addEventListener('click', () => {
+            const query = pill.dataset.query;
+            elements.userInput.value = query;
+            elements.userInput.focus();
+            sendMessage();
+            hideSuggestions();
+        });
+    });
+
     // Set initial active language button
     updateActiveLanguageButton();
+
+    // Show suggestions after welcome message
+    showSuggestions();
 
     console.log('✅ University Helpdesk Assistant initialized');
 }
@@ -115,14 +132,54 @@ function handleKeyPress(event) {
     }
 }
 
+// ===== MARKDOWN PARSER =====
+function parseMarkdown(text) {
+    // Parse markdown-like formatting
+    let parsed = text;
+
+    // Bold: **text** or __text__
+    parsed = parsed.replace(/\*\*([^\*]+)\*\*/g, '<strong>$1</strong>');
+    parsed = parsed.replace(/__([^_]+)__/g, '<strong>$1</strong>');
+
+    // Italic: *text* or _text_
+    parsed = parsed.replace(/\*([^\*]+)\*/g, '<em>$1</em>');
+    parsed = parsed.replace(/_([^_]+)_/g, '<em>$1</em>');
+
+    // Inline code: `code`
+    parsed = parsed.replace(/`([^`]+)`/g, '<code>$1</code>');
+
+    // Links: [text](url)
+    parsed = parsed.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+
+    // Auto-link URLs
+    parsed = parsed.replace(/(?<!href=")(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank">$1</a>');
+
+    // Line breaks
+    parsed = parsed.replace(/\n\n/g, '</p><p>');
+    parsed = parsed.replace(/\n/g, '<br>');
+
+    // Wrap in paragraph if not already
+    if (!parsed.startsWith('<p>')) {
+        parsed = '<p>' + parsed + '</p>';
+    }
+
+    return parsed;
+}
+
 // ===== SEND MESSAGE =====
 async function sendMessage() {
     const message = elements.userInput.value.trim();
 
     if (!message) return;
 
+    // Hide suggestions after first message
+    hideSuggestions();
+
     // Display user message
     addMessage(message, 'user');
+
+    // Store in history
+    messageHistory.push({ role: 'user', content: message });
 
     // Clear input
     elements.userInput.value = '';
@@ -131,8 +188,8 @@ async function sendMessage() {
     // Disable send button
     elements.sendBtn.disabled = true;
 
-    // Show loading indicator
-    showLoading();
+    // Show typing indicator
+    showTypingIndicator();
 
     try {
         // Send to backend
@@ -146,7 +203,7 @@ async function sendMessage() {
 
         // Handle specific error status codes
         if (response.status === 401 || response.status === 403) {
-            hideLoading();
+            hideTypingIndicator();
             addMessage('⚠️ Authentication Error: Please check your OpenAI API key in backend/.env file', 'error');
             return;
         }
@@ -157,19 +214,20 @@ async function sendMessage() {
 
         const data = await response.json();
 
-        // Hide loading
-        hideLoading();
+        // Hide typing indicator
+        hideTypingIndicator();
 
         // Display AI response
         if (data.status === 'success' && data.response) {
             addMessage(data.response, 'bot');
+            messageHistory.push({ role: 'bot', content: data.response });
         } else {
             addMessage('Sorry, I could not generate a response. Please try again.', 'error');
         }
 
     } catch (error) {
         console.error('Error:', error);
-        hideLoading();
+        hideTypingIndicator();
         addMessage('Unable to connect to the server. Please ensure the backend is running on http://localhost:5000', 'error');
     } finally {
         // Re-enable send button
@@ -186,10 +244,14 @@ function addMessage(text, type) {
     const contentDiv = document.createElement('div');
     contentDiv.className = 'message-content';
 
-    const textP = document.createElement('p');
-    textP.textContent = text;
-
-    contentDiv.appendChild(textP);
+    // Parse markdown for bot messages
+    if (type === 'bot') {
+        contentDiv.innerHTML = parseMarkdown(text);
+    } else {
+        const textP = document.createElement('p');
+        textP.textContent = text;
+        contentDiv.appendChild(textP);
+    }
 
     // Add timestamp
     const timeSpan = document.createElement('div');
@@ -198,15 +260,49 @@ function addMessage(text, type) {
     contentDiv.appendChild(timeSpan);
 
     messageDiv.appendChild(contentDiv);
-    elements.chatContainer.appendChild(messageDiv);
+
+    // Insert before typing indicator if it exists
+    const typingIndicator = elements.typingIndicator;
+    if (typingIndicator && typingIndicator.parentNode === elements.chatContainer) {
+        elements.chatContainer.insertBefore(messageDiv, typingIndicator);
+    } else {
+        elements.chatContainer.appendChild(messageDiv);
+    }
 
     // Scroll to bottom
     scrollToBottom();
 }
 
+// ===== TYPING INDICATOR =====
+function showTypingIndicator() {
+    if (elements.typingIndicator) {
+        elements.typingIndicator.classList.add('active');
+        scrollToBottom();
+    }
+}
+
+function hideTypingIndicator() {
+    if (elements.typingIndicator) {
+        elements.typingIndicator.classList.remove('active');
+    }
+}
+
+// ===== SUGGESTIONS =====
+function showSuggestions() {
+    if (elements.suggestions) {
+        elements.suggestions.classList.add('active');
+    }
+}
+
+function hideSuggestions() {
+    if (elements.suggestions) {
+        elements.suggestions.classList.remove('active');
+    }
+}
+
 // ===== CLEAR CHAT =====
 function clearChat() {
-    // Remove all messages except welcome message
+    // Remove all messages except welcome message, suggestions, and typing indicator
     const messages = elements.chatContainer.querySelectorAll('.message');
     messages.forEach((msg, index) => {
         if (index > 0) { // Skip first message (welcome)
@@ -214,20 +310,20 @@ function clearChat() {
         }
     });
 
+    // Clear history
+    messageHistory = [];
+
+    // Show suggestions again
+    showSuggestions();
+
     console.log('Chat cleared');
 }
 
 // ===== UTILITY FUNCTIONS =====
-function showLoading() {
-    elements.loadingIndicator.classList.add('active');
-}
-
-function hideLoading() {
-    elements.loadingIndicator.classList.remove('active');
-}
-
 function scrollToBottom() {
-    elements.chatContainer.scrollTop = elements.chatContainer.scrollHeight;
+    setTimeout(() => {
+        elements.chatContainer.scrollTop = elements.chatContainer.scrollHeight;
+    }, 100);
 }
 
 function getCurrentTime() {

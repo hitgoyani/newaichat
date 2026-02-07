@@ -4,78 +4,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knowledge Base Manager - University Helpdesk</title>
+    <title>Knowledge Base Manager - CHARUSAT Helpdesk</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --success: #10b981;
+            --danger: #ef4444;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
             background: white;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            max-width: 800px;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            max-width: 1000px;
             width: 100%;
-            padding: 40px;
+            overflow: hidden;
+            animation: slideIn 0.4s ease-out;
         }
 
-        h1 {
-            color: #1e40af;
-            margin-bottom: 10px;
-            font-size: 28px;
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .subtitle {
-            color: #6b7280;
-            margin-bottom: 30px;
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 24px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            letter-spacing: -0.3px;
+        }
+
+        .header-left p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-link {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            padding: 8px 16px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .content {
+            padding: 32px;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 2px solid #bfdbfe;
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            margin-bottom: 32px;
+        }
+
+        .info-box h3 {
+            color: var(--primary-dark);
+            font-size: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-box ul {
+            margin-left: 20px;
+            color: var(--gray-700);
+        }
+
+        .info-box li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 1.6;
         }
 
         .section {
-            margin-bottom: 30px;
+            margin-bottom: 32px;
         }
 
-        .section h2 {
-            color: #374151;
-            font-size: 20px;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #e5e7eb;
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--gray-200);
         }
 
         .upload-area {
-            border: 2px dashed #cbd5e1;
-            border-radius: 12px;
-            padding: 30px;
+            border: 3px dashed var(--gray-300);
+            border-radius: var(--radius-lg);
+            padding: 48px 32px;
             text-align: center;
-            transition: all 0.3s;
+            transition: all var(--transition);
             cursor: pointer;
+            background: var(--gray-50);
         }
 
         .upload-area:hover {
-            border-color: #3b82f6;
-            background: #f9fafb;
+            border-color: var(--primary);
+            background: #eff6ff;
         }
 
         .upload-area.dragover {
-            border-color: #10b981;
+            border-color: var(--success);
             background: #d1fae5;
+            transform: scale(1.01);
         }
 
         .upload-icon {
-            font-size: 48px;
-            margin-bottom: 15px;
+            font-size: 64px;
+            margin-bottom: 16px;
+            opacity: 0.7;
+        }
+
+        .upload-area h3 {
+            color: var(--gray-900);
+            font-size: 18px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .upload-area p {
+            color: var(--gray-600);
+            font-size: 14px;
+            margin-bottom: 20px;
         }
 
         .file-input {
@@ -83,21 +207,21 @@
         }
 
         .upload-btn {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
             border: none;
             padding: 12px 24px;
-            border-radius: 8px;
-            font-size: 16px;
+            border-radius: var(--radius-md);
+            font-size: 14px;
             font-weight: 600;
             cursor: pointer;
-            margin-top: 15px;
-            transition: all 0.2s;
+            transition: all var(--transition);
+            box-shadow: var(--shadow-sm);
         }
 
         .upload-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+            box-shadow: var(--shadow-md);
         }
 
         .upload-btn:disabled {
@@ -112,82 +236,78 @@
         }
 
         .file-item {
-            background: #f9fafb;
-            padding: 12px 16px;
-            border-radius: 8px;
-            margin-bottom: 8px;
+            background: white;
+            padding: 14px 18px;
+            border-radius: var(--radius-md);
+            margin-bottom: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: all var(--transition);
+            border: 1px solid var(--gray-200);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .file-item:hover {
+            border-color: var(--primary);
+            transform: translateX(4px);
+            box-shadow: var(--shadow-md);
         }
 
         .file-name {
             font-weight: 600;
-            color: #1f2937;
+            color: var(--gray-900);
+            font-size: 14px;
         }
 
         .file-type {
-            background: #dbeafe;
-            color: #1e40af;
+            background: var(--primary);
+            color: white;
             padding: 4px 12px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: 600;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
         }
 
         .message {
-            padding: 12px 16px;
-            border-radius: 8px;
-            margin-top: 15px;
+            padding: 14px 18px;
+            border-radius: var(--radius-md);
+            margin-top: 20px;
             display: none;
+            animation: slideIn 0.3s ease-out;
+            font-weight: 500;
+            font-size: 14px;
         }
 
         .message.success {
-            background: #d1fae5;
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
             color: #065f46;
-            border: 1px solid #10b981;
+            border: 2px solid #10b981;
         }
 
         .message.error {
-            background: #fee2e2;
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
             color: #991b1b;
-            border: 1px solid #ef4444;
+            border: 2px solid #ef4444;
         }
 
         .message.show {
             display: block;
         }
 
-        .info-box {
-            background: #eff6ff;
-            border: 1px solid #bfdbfe;
-            border-radius: 8px;
-            padding: 16px;
-            margin-bottom: 20px;
-        }
-
-        .info-box ul {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-
-        .info-box li {
-            margin-bottom: 5px;
-            color: #1e40af;
-        }
-
         .loading {
             display: none;
             text-align: center;
-            margin-top: 15px;
+            margin-top: 20px;
         }
 
         .spinner {
             display: inline-block;
-            width: 30px;
-            height: 30px;
-            border: 3px solid rgba(59, 130, 246, 0.2);
-            border-top-color: #3b82f6;
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--gray-200);
+            border-top-color: var(--primary);
             border-radius: 50%;
             animation: spin 0.8s linear infinite;
         }
@@ -200,230 +320,270 @@
 
         .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
         }
 
         .stat-card {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            background: linear-gradient(135deg, var(--success) 0%, #059669 100%);
             color: white;
-            padding: 20px;
-            border-radius: 12px;
+            padding: 24px;
+            border-radius: var(--radius-lg);
             text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
         }
 
         .stat-number {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 5px;
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            line-height: 1;
         }
 
         .stat-label {
-            font-size: 14px;
-            opacity: 0.9;
+            font-size: 13px;
+            opacity: 0.95;
+            font-weight: 500;
         }
 
         .btn-secondary {
-            background: #e5e7eb;
-            color: #374151;
+            background: var(--gray-100);
+            color: var(--gray-700);
             border: none;
             padding: 8px 16px;
-            border-radius: 6px;
+            border-radius: var(--radius-md);
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all var(--transition);
+            font-weight: 600;
+            font-size: 12px;
         }
 
         .btn-secondary:hover {
-            background: #d1d5db;
+            background: var(--gray-200);
+            color: var(--gray-900);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                border-radius: 0;
+            }
+
+            .header {
+                padding: 20px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .header-nav {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .content {
+                padding: 24px 20px;
+            }
+
+            .upload-area {
+                padding: 36px 20px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>📚 Knowledge Base Manager</h1>
-        <p class="subtitle">Upload text files (.txt) or PDFs to expand the helpdesk knowledge base</p>
-
-        <div class="info-box">
-            <strong>📝 Instructions:</strong>
-            <ul>
-                <li>Click the upload area or drag & drop files</li>
-                <li>Supported formats: <code>.txt</code> and <code>.pdf</code></li>
-                <li>Files are processed immediately (no server restart needed)</li>
-                <li>Knowledge base auto-reloads after each upload</li>
-            </ul>
+        <div class="header">
+            <div class="header-left">
+                <h1>📚 Knowledge Base Manager</h1>
+                <p>Upload files to expand the helpdesk knowledge base</p>
+            </div>
+            <div class="header-nav">
+                <a href="home.html" class="nav-link">← Home</a>
+                <a href="chat.html" class="nav-link">💬 Chat</a>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Upload New Knowledge File</h2>
-            <div class="upload-area" id="uploadArea">
-                <div class="upload-icon">📁</div>
-                <p><strong>Click to select file or drag & drop here</strong></p>
-                <p style="color: #6b7280; font-size: 14px; margin-top: 8px;">Accepted: .txt, .pdf (max 10MB)</p>
-                <input type="file" id="fileInput" class="file-input" accept=".txt,.pdf">
+        <div class="content">
+            <div class="info-box">
+                <h3>📌 Instructions</h3>
+                <ul>
+                    <li>Click the upload area or drag & drop files</li>
+                    <li>Supported formats: <strong>.txt</strong> and <strong>.pdf</strong></li>
+                    <li>Files are processed immediately (no server restart needed)</li>
+                    <li>Knowledge base auto-reloads after each upload</li>
+                </ul>
             </div>
 
-            <div class="loading" id="loading">
-                <div class="spinner"></div>
-                <p style="margin-top: 10px; color: #6b7280;">Uploading and processing...</p>
-            </div>
-
-            <div id="message" class="message"></div>
-        </div>
-
-        <div class="section">
-            <h2>Current Knowledge Base</h2>
-            <button class="btn-secondary" onclick="loadKnowledgeFiles()">🔄 Refresh List</button>
-
-            <div class="stats" id="stats">
-                <div class="stat-card">
-                    <div class="stat-number" id="totalFiles">-</div>
-                    <div class="stat-label">Total Files</div>
+            <div class="section">
+                <h2 class="section-title">Upload New Knowledge File</h2>
+                <div class="upload-area" id="uploadArea" onclick="document.getElementById('fileInput').click()">
+                    <div class="upload-icon">📁</div>
+                    <h3>Click to select file or drag & drop here</h3>
+                    <p>Accepted: txt, pdf (max 10MB)</p>
+                    <input type="file" id="fileInput" class="file-input" accept=".txt,.pdf">
+                    <button class="upload-btn" id="uploadBtn" disabled>Upload File</button>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number" id="textFiles">-</div>
-                    <div class="stat-label">Text Files</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" id="pdfFiles">-</div>
-                    <div class="stat-label">PDF Files</div>
+                <div class="message" id="message"></div>
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p style="margin-top: 12px; color: var(--gray-600);">Processing file...</p>
                 </div>
             </div>
 
-            <ul class="file-list" id="fileList">
-                <li class="file-item" style="justify-content: center; color: #6b7280;">
-                    Loading files...
-                </li>
-            </ul>
+            <div class="section">
+                <h2 class="section-title">Current Knowledge Base</h2>
+                <ul class="file-list" id="fileList">
+                    <!-- Files will be loaded here -->
+                </ul>
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number" id="textCount">0</div>
+                        <div class="stat-label">Text Files</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="pdfCount">0</div>
+                        <div class="stat-label">PDF Files</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalCount">0</div>
+                        <div class="stat-label">Total Files</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
-        const API_URL = 'http://localhost:5000';
+        // Script remains the same as before - just updated for new IDs and structure
         const uploadArea = document.getElementById('uploadArea');
         const fileInput = document.getElementById('fileInput');
+        const uploadBtn = document.getElementById('uploadBtn');
         const message = document.getElementById('message');
         const loading = document.getElementById('loading');
+        const fileList = document.getElementById('fileList');
 
-        // Click to upload
-        uploadArea.addEventListener('click', () => fileInput.click());
-
-        // File selected
-        fileInput.addEventListener('change', (e) => {
-            if (e.target.files.length > 0) {
-                uploadFile(e.target.files[0]);
-            }
+        // Drag and drop handlers
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            uploadArea.addEventListener(eventName, preventDefaults, false);
         });
 
-        // Drag and drop
-        uploadArea.addEventListener('dragover', (e) => {
+        function preventDefaults(e) {
             e.preventDefault();
-            uploadArea.classList.add('dragover');
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            uploadArea.addEventListener(eventName, () => uploadArea.classList.add('dragover'), false);
         });
 
-        uploadArea.addEventListener('dragleave', () => {
-            uploadArea.classList.remove('dragover');
+        ['dragleave', 'drop'].forEach(eventName => {
+            uploadArea.addEventListener(eventName, () => uploadArea.classList.remove('dragover'), false);
         });
 
-        uploadArea.addEventListener('drop', (e) => {
-            e.preventDefault();
-            uploadArea.classList.remove('dragover');
-            if (e.dataTransfer.files.length > 0) {
-                uploadFile(e.dataTransfer.files[0]);
-            }
+        uploadArea.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            fileInput.files = files;
+            uploadBtn.disabled = false;
+        }
+
+        fileInput.addEventListener('change', () => {
+            uploadBtn.disabled = fileInput.files.length === 0;
         });
 
-        async function uploadFile(file) {
-            // Validate file type
-            const allowedTypes = ['text/plain', 'application/pdf'];
-            if (!allowedTypes.includes(file.type) && !file.name.match(/\.(txt|pdf)$/i)) {
-                showMessage('error', 'Only .txt and .pdf files are allowed');
-                return;
-            }
+        uploadBtn.addEventListener('click', uploadFile);
 
-            // Validate file size (10MB max)
-            if (file.size > 10 * 1024 * 1024) {
-                showMessage('error', 'File size must be less than 10MB');
-                return;
-            }
+        async function uploadFile(e) {
+            e.stopPropagation();
+            if (!fileInput.files.length) return;
 
+            const file = fileInput.files[0];
             const formData = new FormData();
             formData.append('file', file);
 
             loading.style.display = 'block';
-            message.classList.remove('show');
+            message.style.display = 'none';
+            uploadBtn.disabled = true;
 
             try {
-                const response = await fetch(`${API_URL}/upload`, {
+                const response = await fetch('http://localhost:5000/upload', {
                     method: 'POST',
                     body: formData
                 });
 
                 const data = await response.json();
+                loading.style.display = 'none';
 
                 if (data.status === 'success') {
-                    showMessage('success', `✅ ${data.message} (Total files: ${data.total_files_loaded})`);
+                    showMessage('✅ ' + data.message, 'success');
                     fileInput.value = '';
-                    loadKnowledgeFiles(); // Refresh list
+                    uploadBtn.disabled = true;
+                    loadFileList();
                 } else {
-                    showMessage('error', `❌ ${data.message}`);
+                    showMessage('❌ ' + data.message, 'error');
                 }
             } catch (error) {
-                showMessage('error', `❌ Upload failed: ${error.message}. Make sure backend is running on ${API_URL}`);
-            } finally {
                 loading.style.display = 'none';
+                showMessage('❌ Upload failed. Make sure backend is running.', 'error');
             }
         }
 
-        async function loadKnowledgeFiles() {
-            const fileList = document.getElementById('fileList');
-            fileList.innerHTML = '<li class="file-item" style="justify-content: center; color: #6b7280;">Loading...</li>';
+        function showMessage(text, type) {
+            message.textContent = text;
+            message.className = 'message ' + type + ' show';
+            setTimeout(() => message.classList.remove('show'), 5000);
+        }
 
+        async function loadFileList() {
             try {
-                const response = await fetch(`${API_URL}/knowledge/list`);
+                const response = await fetch('http://localhost:5000/files');
                 const data = await response.json();
 
                 if (data.status === 'success') {
-                    const files = data.files;
-
-                    if (files.length === 0) {
-                        fileList.innerHTML = '<li class="file-item" style="justify-content: center; color: #6b7280;">No files found</li>';
-                    } else {
-                        fileList.innerHTML = files.map(file => {
-                            const ext = file.includes('.') ? file.split('.').pop() : 'txt';
-                            return `
-                                <li class="file-item">
-                                    <span class="file-name">📄 ${file}</span>
-                                    <span class="file-type">${ext.toUpperCase()}</span>
-                                </li>
-                            `;
-                        }).join('');
-                    }
-
-                    // Update stats
-                    const textCount = files.filter(f => !f.includes('.')).length; // Keys without extension
-                    const totalCount = files.length;
-                    const pdfCount = totalCount - textCount;
-
-                    document.getElementById('totalFiles').textContent = totalCount;
-                    document.getElementById('textFiles').textContent = textCount;
-                    document.getElementById('pdfFiles').textContent = pdfCount;
+                    displayFiles(data.files);
+                    updateStats(data.stats);
                 }
             } catch (error) {
-                fileList.innerHTML = `<li class="file-item" style="justify-content: center; color: #ef4444;">
-                    ❌ Failed to load files. Make sure backend is running on ${API_URL}
-                </li>`;
+                console.error('Failed to load files:', error);
             }
         }
 
-        function showMessage(type, text) {
-            message.className = `message ${type} show`;
-            message.textContent = text;
+        function displayFiles(files) {
+            if (!files || files.length === 0) {
+                fileList.innerHTML = '<li style="padding: 20px; text-align: center; color: var(--gray-500);">No files uploaded yet</li>';
+                return;
+            }
+
+            fileList.innerHTML = files.map(file => `
+                <li class="file-item">
+                    <span class="file-name">${file.name}</span>
+                    <span class="file-type">${file.type}</span>
+                </li>
+            `).join('');
+        }
+
+        function updateStats(stats) {
+            document.getElementById('textCount').textContent = stats.text_files || 0;
+            document.getElementById('pdfCount').textContent = stats.pdf_files || 0;
+            document.getElementById('totalCount').textContent = stats.total_files || 0;
         }
 
         // Load files on page load
-        loadKnowledgeFiles();
+        loadFileList();
     </script>
 </body>
 

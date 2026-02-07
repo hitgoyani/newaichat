@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHARUSAT AI Helpdesk - Your University Assistant</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    <link rel="stylesheet" href="css/landing.css">
+</head>
+
+<body>
+    <!-- Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>AI-Powered University Assistant</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="gradient-text">Your 24/7 CHARUSAT</span><br>
+                <span class="typing-text" id="typingText"></span>
+                <span class="cursor">|</span>
+            </h1>
+            <p class="hero-subtitle">
+                Get instant answers about admissions, scholarships, research, and campus life.
+                Available in English, Hindi, and Gujarati.
+            </p>
+            <div class="hero-cta">
+                <a href="chat.html" class="btn btn-primary">
+                    <span>Start Chatting</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <a href="upload.html" class="btn btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 13.5V3.5M10 3.5L6 7.5M10 3.5L14 7.5M3.5 16.5H16.5" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Upload Knowledge</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="24">0</div>
+                    <div class="stat-label">Hours Available</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="3">0</div>
+                    <div class="stat-label">Languages</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">% Accuracy</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="float-item float-1">🎓</div>
+            <div class="float-item float-2">💡</div>
+            <div class="float-item float-3">📚</div>
+            <div class="float-item float-4">🔬</div>
+            <div class="float-item float-5">🌟</div>
+            <div class="float-item float-6">💬</div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-accent">Why Choose</span>
+                <span class="gradient-text">CHARUSAT AI Helpdesk</span>
+            </h2>
+            <div class="features-grid">
+                <div class="feature-card" data-index="0">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path
+                                d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z"
+                                stroke="url(#grad1)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M24 16V24L28 28" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="grad1" x1="4" y1="4" x2="44" y2="44">
+                                    <stop offset="0%" stop-color="#667eea" />
+                                    <stop offset="100%" stop-color="#764ba2" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">24/7 Availability</h3>
+                    <p class="feature-description">Get instant answers anytime, anywhere. Our AI assistant never
+                        sleeps, ensuring you always have support when you need it.</p>
+                </div>
+
+                <div class="feature-card" data-index="1">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path
+                                d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z"
+                                stroke="url(#grad2)" stroke-width="3" />
+                            <path d="M16 24H32M24 16V32" stroke="url(#grad2)" stroke-width="3" stroke-linecap="round" />
+                            <defs>
+                                <linearGradient id="grad2" x1="4" y1="4" x2="44" y2="44">
+                                    <stop offset="0%" stop-color="#f093fb" />
+                                    <stop offset="100%" stop-color="#f5576c" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Multilingual Support</h3>
+                    <p class="feature-description">Communicate in your preferred language - English, Hindi, or
+                        Gujarati. Break language barriers effortlessly.</p>
+                </div>
+
+                <div class="feature-card" data-index="2">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path
+                                d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z"
+                                stroke="url(#grad3)" stroke-width="3" />
+                            <path d="M20 20L24 24L28 20M20 28L24 24L28 28" stroke="url(#grad3)" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="grad3" x1="4" y1="4" x2="44" y2="44">
+                                    <stop offset="0%" stop-color="#4facfe" />
+                                    <stop offset="100%" stop-color="#00f2fe" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">AI-Powered Intelligence</h3>
+                    <p class="feature-description">Leveraging advanced AI to understand context and provide accurate,
+                        relevant answers from our comprehensive knowledge base.</p>
+                </div>
+
+                <div class="feature-card" data-index="3">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path
+                                d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z"
+                                stroke="url(#grad4)" stroke-width="3" />
+                            <path d="M18 24L22 28L30 20" stroke="url(#grad4)" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="grad4" x1="4" y1="4" x2="44" y2="44">
+                                    <stop offset="0%" stop-color="#43e97b" />
+                                    <stop offset="100%" stop-color="#38f9d7" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Secure & Private</h3>
+                    <p class="feature-description">Your data is protected with enterprise-grade security. We respect
+                        your privacy and never share your information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="howItWorks">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-accent">Simple & Intuitive</span>
+                <span class="gradient-text">How It Works</span>
+            </h2>
+            <div class="steps">
+                <div class="step" data-step="1">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Ask Your Question</h3>
+                        <p>Type or speak your question about admissions, scholarships, campus life, or research
+                            opportunities.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step" data-step="2">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>AI Processes Request</h3>
+                        <p>Our intelligent system searches through thousands of documents and resources to find the
+                            best answer.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step" data-step="3">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Get Instant Answer</h3>
+                        <p>Receive accurate, detailed responses in seconds. Follow up with more questions as needed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2 class="cta-title">Ready to Get Started?</h2>
+            <p class="cta-subtitle">Join hundreds of students getting instant answers to their university questions.
+            </p>
+            <a href="chat.html" class="btn btn-large">
+                <span>Start Your First Chat</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>🎓 CHARUSAT AI Helpdesk</h3>
+                    <p>Powered by advanced AI technology</p>
+                </div>
+                <div class="footer-links">
+                    <a href="chat.html">Chat</a>
+                    <a href="upload.html">Upload</a>
+                    <a href="#features">Features</a>
+                    <a href="#howItWorks">How It Works</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CHARUSAT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="js/landing.js"></script>
+</body>
+
+</html>
